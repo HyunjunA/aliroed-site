@@ -57,18 +57,21 @@ function pingURL() {
                 // make loadingeds text changed
                 const sele2 = document.getElementById('loadingeds');
 
-                // make the loadingeds clickable and link to the URL
+                if (sele2 != null) {
 
-                sele2.innerHTML = "Aliro is ready to run";
-                sele2.href = URL;
+                    // make the loadingeds clickable and link to the URL
 
-                // make the mouse cursor pointer like hand
-                sele2.style.cursor = "pointer";
+                    sele2.innerHTML = "Aliro is ready to run";
+                    sele2.href = URL;
 
-                sele2.addEventListener('click', function () {
-                    // move to the URL
-                    window.location.href = URL;
-                });
+                    // make the mouse cursor pointer like hand
+                    sele2.style.cursor = "pointer";
+
+                    sele2.addEventListener('click', function () {
+                        // move to the URL
+                        window.location.href = URL;
+                    });
+                }
 
                 const selcir = document.getElementsByClassName('blinkingcir')
 
@@ -147,18 +150,21 @@ function pingURL_DOWNLOAD() {
                 // make loadingeds text changed
                 const sele2 = document.getElementById('loadingeds');
 
-                // make the loadingeds clickable and link to the URL
+                if (sele2 != null) {
 
-                sele2.innerHTML = "Aliro is ready to run";
-                sele2.href = URL;
+                    // make the loadingeds clickable and link to the URL
 
-                // make the mouse cursor pointer like hand
-                sele2.style.cursor = "pointer";
+                    sele2.innerHTML = "Aliro is ready to run";
+                    sele2.href = URL;
 
-                sele2.addEventListener('click', function () {
-                    // move to the URL
-                    window.location.href = URL;
-                });
+                    // make the mouse cursor pointer like hand
+                    sele2.style.cursor = "pointer";
+
+                    sele2.addEventListener('click', function () {
+                        // move to the URL
+                        window.location.href = URL;
+                    });
+                }
 
                 const selcir = document.getElementsByClassName('blinkingcir')
 
@@ -911,17 +917,17 @@ function onedplotToTwodPlot() {
 
     // Add dots svg.append('g')   .selectAll("dot")
     // .data(data.filter(function(d,i){return i<100000}))  the .filter part is just
-    // to keep a few dots on the chart, not all of them   .enter()
-    // .append("circle")     .attr("cx", function (d) { return x(d['petal-length']);
-    // } )     .attr("cy", function (d) { return y(d['sepal-length']); } )
-    // .attr("r", 2)     .style("fill", "#69b3a2")     .style("opacity", 0.1)
-    // .style("stroke", "white")   .on("mouseover", mouseover )   .on("mousemove",
-    // mousemove )   .on("mouseleave", mouseleave );  svg.selectAll("circle")
-    // d3v4.select("#dataviz_area") .on("mouseover", project_y_axis )
-    // .on("mousemove", mousemove ) .on("mouseleave", twoDPlot );
-    // d3v4.select("#next") .on("mouseover", mouseover ) .on("mouseleave",
-    // mouseleave ); click d3v4.select("#next") .on("click", function() {
-    // console.log("click"); }); force to click on the button #projectxaxia
+    // to keep a few dots on the chart, not all of them   .enter() .append("circle")
+    // .attr("cx", function (d) { return x(d['petal-length']); } )     .attr("cy",
+    // function (d) { return y(d['sepal-length']); } ) .attr("r", 2) .style("fill",
+    // "#69b3a2")     .style("opacity", 0.1) .style("stroke", "white")
+    // .on("mouseover", mouseover )   .on("mousemove", mousemove ) .on("mouseleave",
+    // mouseleave );  svg.selectAll("circle") d3v4.select("#dataviz_area")
+    // .on("mouseover", project_y_axis ) .on("mousemove", mousemove )
+    // .on("mouseleave", twoDPlot ); d3v4.select("#next") .on("mouseover", mouseover
+    // ) .on("mouseleave", mouseleave ); click d3v4.select("#next") .on("click",
+    // function() { console.log("click"); }); force to click on the button
+    // #projectxaxia
 
     d3v4
         .select("#projectxaxia_scatter")
@@ -1765,14 +1771,13 @@ function boxplot_direct_from_y() {
         // svg.selectAll(".arc")     .data(pie(data_pc_second))     .enter()
         // .append("g")       show fade in effect       .style("opacity", 1)
         // .style("opacity", 0)      .transition()      .duration(2000)
-        // .style("opacity", 0)     .attr("class", "arc")
-        // .attr("id","first_piechart"); g.append("path")     .attr("d", arc)
-        // .style("fill", function(d) { return color(d.data); }); g.append("text")
-        // fade in effect     .style("opacity", 0)     .transition()     .duration(2000)
-        // .style("opacity", 1)     .attr("transform", function(d) { return "translate("
-        // + labelArc.centroid(d) + ")"; })     .attr("dy", ".35em")
-        // .text(function(d) { return d.data; });  fade in effect g.style("opacity", 0)
-        // .transition() .duration(2000) .style("opacity", 1)
+        // .style("opacity", 0)     .attr("class", "arc") .attr("id","first_piechart");
+        // g.append("path")     .attr("d", arc) .style("fill", function(d) { return
+        // color(d.data); }); g.append("text") fade in effect     .style("opacity", 0)
+        // .transition()     .duration(2000) .style("opacity", 1)     .attr("transform",
+        // function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+        // .attr("dy", ".35em") .text(function(d) { return d.data; });  fade in effect
+        // g.style("opacity", 0) .transition() .duration(2000) .style("opacity", 1)
 
     }
 
@@ -1948,14 +1953,13 @@ function boxplot_direct_from_y() {
     // svg.select(".myXaxis_scatter")         .transition()         .duration(2000)
     // .attr("opacity", "1")         .call(d3v4.axisBottom(x));       y.domain([0,
     // 10])       svg.select(".myYaxis_scatter")         .transition()
-    // .duration(2000)         .attr("opacity", "1")
-    // .call(d3v4.axisLeft(y));       svg.selectAll("circle")         .transition()
-    // .delay(function (d, i) { return (i * 3) })         .duration(1000)
-    // .attr("cx", function (d) { return x(d['petal-length']); })
-    // .attr("cy", function (d) { return y(d['sepal-length']); })          give
-    // color to the dots based on the class         .style("fill", function (d) {
-    // return colorClass(d['class']) });        tooltip          .transition()
-    // .duration(200)          .style("opacity", 0)     }
+    // .duration(2000)         .attr("opacity", "1") .call(d3v4.axisLeft(y));
+    // svg.selectAll("circle")         .transition() .delay(function (d, i) { return
+    // (i * 3) })         .duration(1000) .attr("cx", function (d) { return
+    // x(d['petal-length']); }) .attr("cy", function (d) { return
+    // y(d['sepal-length']); })          give color to the dots based on the class
+    // .style("fill", function (d) { return colorClass(d['class']) }); tooltip
+    // .transition() .duration(200)          .style("opacity", 0) }
     // d3v4.select("#projectyaxia_boxplot")   .on("click", project_y_axis_boxplot);
     // d3v4.select("#twoDPlot")   .on("click", twoDPlot);
     // d3v4.select("#rotateprojectxaxia") .on("click", rotate_project_on_x_axis );
@@ -1970,9 +1974,9 @@ function boxplot_direct_from_y() {
         .on("mouseover", thickyaxis_boxplot)
         .on("mouseout", normalyaxis_boxplot)
         .on("click", showboundaries_boxplot);
-    // .on("dblclick", showpiechart_v1); d3v4.select("#show_piechart")
-    // .on("click", showpiechart_v1); d3v4.select("#show_piechart_another")
-    // .on("click", showpiechart_v1_reset); if select fbbfirsttosecondbound
+    // .on("dblclick", showpiechart_v1); d3v4.select("#show_piechart") .on("click",
+    // showpiechart_v1); d3v4.select("#show_piechart_another") .on("click",
+    // showpiechart_v1_reset); if select fbbfirsttosecondbound
     d3v4
         .select("#fbbfirsttosecondbound_boxplot")
         .on("click", showboundariesSecondBound_boxplot)
@@ -2135,29 +2139,28 @@ function decisiontree() {
                                                             : file_name
 
                                                         // d3v3.json(filetochoose, function (error, flare) {   if (error) throw error;
-                                                        // console.log(getDepth(flare))   tree = d3v3.layout.tree()
-                                                        // .separation(function (a, b) { return ((a.parent == root) && (b.parent ==
-                                                        // root)) ? strokeness : strokeness; })     .size([height, getDepth(flare) *
-                                                        // width / 8]);   diagonal = d3v3.svg.diagonal()     .projection(function (d) {
-                                                        // return [d.y, d.x]; });    svg = d3v3.select("body").append("svg")
-                                                        // .attr("width", getDepth(flare) * width / 8 + margin.right + margin.left)
-                                                        // .attr("height", height + margin.top + margin.bottom)      .append("g")
-                                                        // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-                                                        // svg = d3v3.select("#dataviz_area_div")     .append("svg")     .attr("id",
-                                                        // "dataviz_area_div_svg")     .attr("width", width + margin.left +
-                                                        // margin.right)     .attr("height", height + margin.top + margin.bottom)
-                                                        // .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-                                                        // .attr("viewBox", `-25 -15 400 250`)      .attr("viewBox", `-30 -30 500 400`)
-                                                        // current      .attr("viewBox", `-90 -30 500 400`)      .attr("viewBox", `-90
-                                                        // -30 600 800`)        .attr("viewBox", `-90 -30 600 500`)
-                                                        // .attr("viewBox", `30 -80 600 600`)   TOTAL_SIZE = flare.size   l =
-                                                        // flare.pred.replace(/of/g, "").split(', ')   for (var j = 0; j < l.length;
-                                                        // j++) {     l[j] = l[j].split(' ')[2]   }   label_names = l   root = flare;
-                                                        // root.x0 = height / 2;   root.y0 = 0;   function collapse(d) {     if
-                                                        // (d.children) {       d._children = d.children;
-                                                        // d._children.forEach(collapse);       d.children = null;     }   }
-                                                        // root.children.forEach(collapse);   update(root, l.length);
-                                                        // createLabels(l); }); get data from the iris_tree_data.js
+                                                        // console.log(getDepth(flare))   tree = d3v3.layout.tree() .separation(function
+                                                        // (a, b) { return ((a.parent == root) && (b.parent == root)) ? strokeness :
+                                                        // strokeness; })     .size([height, getDepth(flare) * width / 8]);   diagonal =
+                                                        // d3v3.svg.diagonal()     .projection(function (d) { return [d.y, d.x]; }); svg
+                                                        // = d3v3.select("body").append("svg") .attr("width", getDepth(flare) * width /
+                                                        // 8 + margin.right + margin.left) .attr("height", height + margin.top +
+                                                        // margin.bottom)      .append("g") .attr("transform", "translate(" +
+                                                        // margin.left + "," + margin.top + ")"); svg = d3v3.select("#dataviz_area_div")
+                                                        // .append("svg")     .attr("id", "dataviz_area_div_svg")     .attr("width",
+                                                        // width + margin.left + margin.right)     .attr("height", height + margin.top +
+                                                        // margin.bottom) .attr("transform", "translate(" + margin.left + "," +
+                                                        // margin.top + ")") .attr("viewBox", `-25 -15 400 250`)      .attr("viewBox",
+                                                        // `-30 -30 500 400`) current      .attr("viewBox", `-90 -30 500 400`)
+                                                        // .attr("viewBox", `-90
+                                                        // -30 600 800`)        .attr("viewBox", `-90 -30 600 500`) .attr("viewBox", `30
+                                                        // -80 600 600`)   TOTAL_SIZE = flare.size   l = flare.pred.replace(/of/g,
+                                                        // "").split(', ')   for (var j = 0; j < l.length; j++) {     l[j] =
+                                                        // l[j].split(' ')[2]   }   label_names = l   root = flare; root.x0 = height /
+                                                        // 2;   root.y0 = 0;   function collapse(d) {     if (d.children) { d._children
+                                                        // = d.children; d._children.forEach(collapse);       d.children = null;     }
+                                                        // } root.children.forEach(collapse);   update(root, l.length); createLabels(l);
+                                                        // }); get data from the iris_tree_data.js
 
                                                         var iris_tree_Data = {
                                                             "name": "petal length (cm) > 2.45000004768",
@@ -3382,8 +3385,8 @@ function decisiontree() {
 
                                                         // d3v3.json("structure_iris_dc_2.json", function(error, flare) {
                                                         // d3v3.json("structure_iris_dc_2.json", function(error, flare) {   if (error)
-                                                        // throw error;   root = flare;   root.x0 = height / 2;   root.y0 = 0;
-                                                        // function collapse(d) {     if (d.children) {       d._children = d.children;
+                                                        // throw error;   root = flare;   root.x0 = height / 2;   root.y0 = 0; function
+                                                        // collapse(d) {     if (d.children) {       d._children = d.children;
                                                         // d._children.forEach(collapse);       d.children = null;     }   }
                                                         // root.children.forEach(collapse);   update(root); });
 
@@ -3604,280 +3607,170 @@ function decisiontree() {
 
                                                     }
 
-// function check_clickedid(clicked_id) {
+                                                    // function check_clickedid(clicked_id) {   console.log("clicked_id: " +
+                                                    // clicked_id)    check whehter clicked_id has catterplot, boxplot or dectree if
+                                                    // (clicked_id == "scatterplot_sec") {       showScatter = true; showBars =
+                                                    // false;       showDecTree = false;        make id scatterplot_sec text bold
+                                                    // document.getElementById("scatterplot_sec").style.fontWeight
+                                                    // = "bold"; get        text of id scatterplot_sec       var
+                                                    // scatterplot_sec_text = document           .getElementById("scatterplot_sec")
+                                                    // .innerHTML;       console.log("scatterplot_sec_text: " +
+                                                    // scatterplot_sec_text)        make
+                                                    // document.getElementById("scatterplot_sec").innerHTML bold       document
+                                                    // .getElementById("scatterplot_sec")           .innerHTML = "<b>" +
+                                                    // scatterplot_sec_text + "</b>";        add under line to
+                                                    // document.getElementById("scatterplot_sec").innerHTML       document
+                                                    // .getElementById("scatterplot_sec")           .style           .textDecoration
+                                                    // = "underline";        get text of id boxplot_sec       if (boxplot_sec_text =
+                                                    // document.getElementById("boxplot_sec") != null) {           var
+                                                    // boxplot_sec_text = document               .getElementById("boxplot_sec")
+                                                    // .innerHTML;           console.log("boxplot_sec_text: " + boxplot_sec_text)
+                                                    // make document.getElementById("boxplot_sec").innerHTML bold           document
+                                                    // .getElementById("boxplot_sec")               .innerHTML = boxplot_sec_text;
+                                                    // remove under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document.getElementById("boxplot_sec").style.textDecoration = "none";       }
+                                                    // if (document.getElementById("dectree_sec") != null) {            get text of
+                                                    // id dectree_sec           var dectree_sec_text = document
+                                                    // .getElementById("dectree_sec")               .innerHTML;
+                                                    // console.log("dectree_sec_text: " + dectree_sec_text)            make
+                                                    // document.getElementById("dectree_sec").innerHTML bold           document
+                                                    // .getElementById("dectree_sec")               .innerHTML = dectree_sec_text;
+                                                    // add under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document               .getElementById("dectree_sec")               .style
+                                                    // .textDecoration = "none";       }   } else if (clicked_id == "boxplot_sec") {
+                                                    // showScatter = false;       showBars = true;       showDecTree = false; if
+                                                    // (document.getElementById("scatterplot_sec") != null) {            get text of
+                                                    // id scatterplot_sec           var scatterplot_sec_text = document
+                                                    // .getElementById("scatterplot_sec")               .innerHTML;
+                                                    // console.log("scatterplot_sec_text: " + scatterplot_sec_text) remove <b> tag
+                                                    // from document.getElementById("scatterplot_sec").innerHTML document
+                                                    // .getElementById("scatterplot_sec") .innerHTML = scatterplot_sec_text;
+                                                    // add under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document .getElementById("scatterplot_sec")               .style
+                                                    // .textDecoration = "none";       }       if
+                                                    // (document.getElementById("boxplot_sec") != null) {            get text of id
+                                                    // boxplot_sec           var boxplot_sec_text = document
+                                                    // .getElementById("boxplot_sec")               .innerHTML;
+                                                    // console.log("boxplot_sec_text: " + boxplot_sec_text)            make
+                                                    // document.getElementById("boxplot_sec").innerHTML bold           document
+                                                    // .getElementById("boxplot_sec")               .innerHTML = "<b>" +
+                                                    // boxplot_sec_text + "</b>";            add under line to
+                                                    // document.getElementById("scatterplot_sec").innerHTML           document
+                                                    // .getElementById("boxplot_sec")               .style .textDecoration =
+                                                    // "underline";       }       if (document.getElementById("dectree_sec") !=
+                                                    // null) {            get text of id dectree_sec           var dectree_sec_text
+                                                    // = document .getElementById("dectree_sec")               .innerHTML;
+                                                    // console.log("dectree_sec_text: " + dectree_sec_text)            make
+                                                    // document.getElementById("dectree_sec").innerHTML bold           document
+                                                    // .getElementById("dectree_sec")               .innerHTML = dectree_sec_text;
+                                                    // add under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document               .getElementById("dectree_sec")               .style
+                                                    // .textDecoration = "none";       }   } else if (clicked_id == "dectree_sec") {
+                                                    // showScatter = false;       showBars = false;       showDecTree = true; if
+                                                    // (document.getElementById("scatterplot_sec") != null) {            get text of
+                                                    // id scatterplot_sec           var scatterplot_sec_text = document
+                                                    // .getElementById("scatterplot_sec")               .innerHTML;
+                                                    // console.log("scatterplot_sec_text: " + scatterplot_sec_text) remove <b> tag
+                                                    // from document.getElementById("scatterplot_sec").innerHTML document
+                                                    // .getElementById("scatterplot_sec") .innerHTML = scatterplot_sec_text;
+                                                    // add under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document .getElementById("scatterplot_sec")               .style
+                                                    // .textDecoration = "none";       }       if
+                                                    // (document.getElementById("boxplot_sec") != null) {            get text of id
+                                                    // boxplot_sec           var boxplot_sec_text = document
+                                                    // .getElementById("boxplot_sec")               .innerHTML;
+                                                    // console.log("boxplot_sec_text: " + boxplot_sec_text)            make
+                                                    // document.getElementById("boxplot_sec").innerHTML bold           document
+                                                    // .getElementById("boxplot_sec")               .innerHTML = boxplot_sec_text;
+                                                    // add under line to document.getElementById("scatterplot_sec").innerHTML
+                                                    // document               .getElementById("boxplot_sec")               .style
+                                                    // .textDecoration = "none";       }       if
+                                                    // (document.getElementById("dectree_sec") != null) {            get text of id
+                                                    // dectree_sec           var dectree_sec_text = document
+                                                    // .getElementById("dectree_sec")               .innerHTML;
+                                                    // console.log("dectree_sec_text: " + dectree_sec_text)            make
+                                                    // document.getElementById("dectree_sec").innerHTML bold           document
+                                                    // .getElementById("dectree_sec")               .innerHTML = "<b>" +
+                                                    // dectree_sec_text + "</b>";            add under line to
+                                                    // document.getElementById("scatterplot_sec").innerHTML           document
+                                                    // .getElementById("dectree_sec")               .style .textDecoration =
+                                                    // "underline";       }   } }
 
-//   console.log("clicked_id: " + clicked_id)
+                                                    function check_clickedid(clicked_id) {
 
-//   // check whehter clicked_id has catterplot, boxplot or dectree
-//   if (clicked_id == "scatterplot_sec") {
-//       showScatter = true;
-//       showBars = false;
-//       showDecTree = false;
+                                                        // parse clicked_id with - and get the first part var clicked_id =
+                                                        // clicked_id.split("-")[0]; console.log("clicked_id: " + clicked_id) check
+                                                        // whehter clicked_id has catterplot, boxplot or dectree
+                                                        if (clicked_id == "scatterplot_sec-one" || clicked_id == "scatterplot_sec-two" || clicked_id == "scatterplot_sec-three") {
+                                                            showScatter = true;
+                                                            showBars = false;
+                                                            showDecTree = false;
 
-//       // make id scatterplot_sec text bold
-//       // document.getElementById("scatterplot_sec").style.fontWeight = "bold"; get
-//       // text of id scatterplot_sec
-//       var scatterplot_sec_text = document
-//           .getElementById("scatterplot_sec")
-//           .innerHTML;
-//       console.log("scatterplot_sec_text: " + scatterplot_sec_text)
-//       // make document.getElementById("scatterplot_sec").innerHTML bold
-//       document
-//           .getElementById("scatterplot_sec")
-//           .innerHTML = "<b>" + scatterplot_sec_text + "</b>";
-//       // add under line to document.getElementById("scatterplot_sec").innerHTML
-//       document
-//           .getElementById("scatterplot_sec")
-//           .style
-//           .textDecoration = "underline";
+                                                        } else if (clicked_id == "boxplot_sec-one" || clicked_id == "boxplot_sec-two" || clicked_id == "boxplot_sec-three") {
+                                                            showScatter = false;
+                                                            showBars = true;
+                                                            showDecTree = false;
 
-//       // get text of id boxplot_sec
+                                                        } else if (clicked_id == "dectree_sec-one" || clicked_id == "dectree_sec-two" || clicked_id == "dectree_sec-there") {
+                                                            showScatter = false;
+                                                            showBars = false;
+                                                            showDecTree = true;
 
-//       if (boxplot_sec_text = document.getElementById("boxplot_sec") != null) {
-//           var boxplot_sec_text = document
-//               .getElementById("boxplot_sec")
-//               .innerHTML;
-//           console.log("boxplot_sec_text: " + boxplot_sec_text)
-//           // make document.getElementById("boxplot_sec").innerHTML bold
-//           document
-//               .getElementById("boxplot_sec")
-//               .innerHTML = boxplot_sec_text;
-//           // remove under line to document.getElementById("scatterplot_sec").innerHTML
-//           document.getElementById("boxplot_sec").style.textDecoration = "none";
+                                                        }
 
-//       }
+                                                    }
 
-//       if (document.getElementById("dectree_sec") != null) {
-//           // get text of id dectree_sec
-//           var dectree_sec_text = document
-//               .getElementById("dectree_sec")
-//               .innerHTML;
-//           console.log("dectree_sec_text: " + dectree_sec_text)
-//           // make document.getElementById("dectree_sec").innerHTML bold
-//           document
-//               .getElementById("dectree_sec")
-//               .innerHTML = dectree_sec_text;
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("dectree_sec")
-//               .style
-//               .textDecoration = "none";
-//       }
+                                                    function ShowOnechartOfthem(clicked_id) {
 
-//   } else if (clicked_id == "boxplot_sec") {
-//       showScatter = false;
-//       showBars = true;
-//       showDecTree = false;
+                                                        // check whehter clicked_id has catterplot, boxplot or dectree
+                                                        check_clickedid(clicked_id)
 
-//       if (document.getElementById("scatterplot_sec") != null) {
-//           // get text of id scatterplot_sec
-//           var scatterplot_sec_text = document
-//               .getElementById("scatterplot_sec")
-//               .innerHTML;
-//           console.log("scatterplot_sec_text: " + scatterplot_sec_text)
+                                                        if (showScatter == true) {
 
-//           // remove <b> tag from document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("scatterplot_sec")
-//               .innerHTML = scatterplot_sec_text;
+                                                            // scatterPlot show section id scatterPlot and hide the others
+                                                            document
+                                                                .getElementById("scatterPlot")
+                                                                .style
+                                                                .display = "block";
+                                                            document
+                                                                .getElementById("boxPlot")
+                                                                .style
+                                                                .display = "none";
+                                                            document
+                                                                .getElementById("decTree")
+                                                                .style
+                                                                .display = "none";
 
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("scatterplot_sec")
-//               .style
-//               .textDecoration = "none";
-//       }
+                                                        } else if (showBars == true) {
 
-//       if (document.getElementById("boxplot_sec") != null) {
-//           // get text of id boxplot_sec
-//           var boxplot_sec_text = document
-//               .getElementById("boxplot_sec")
-//               .innerHTML;
-//           console.log("boxplot_sec_text: " + boxplot_sec_text)
+                                                            document
+                                                                .getElementById("scatterPlot")
+                                                                .style
+                                                                .display = "none";
+                                                            document
+                                                                .getElementById("boxPlot")
+                                                                .style
+                                                                .display = "block";
+                                                            document
+                                                                .getElementById("decTree")
+                                                                .style
+                                                                .display = "none";
 
-//           // make document.getElementById("boxplot_sec").innerHTML bold
-//           document
-//               .getElementById("boxplot_sec")
-//               .innerHTML = "<b>" + boxplot_sec_text + "</b>";
+                                                        } else if (showDecTree == true) {
 
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("boxplot_sec")
-//               .style
-//               .textDecoration = "underline";
-//       }
+                                                            document
+                                                                .getElementById("scatterPlot")
+                                                                .style
+                                                                .display = "none";
+                                                            document
+                                                                .getElementById("boxPlot")
+                                                                .style
+                                                                .display = "none";
+                                                            document
+                                                                .getElementById("decTree")
+                                                                .style
+                                                                .display = "block";
 
-//       if (document.getElementById("dectree_sec") != null) {
-//           // get text of id dectree_sec
-//           var dectree_sec_text = document
-//               .getElementById("dectree_sec")
-//               .innerHTML;
-//           console.log("dectree_sec_text: " + dectree_sec_text)
-//           // make document.getElementById("dectree_sec").innerHTML bold
-//           document
-//               .getElementById("dectree_sec")
-//               .innerHTML = dectree_sec_text;
+                                                        }
 
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("dectree_sec")
-//               .style
-//               .textDecoration = "none";
-
-//       }
-
-//   } else if (clicked_id == "dectree_sec") {
-//       showScatter = false;
-//       showBars = false;
-//       showDecTree = true;
-
-
-//       if (document.getElementById("scatterplot_sec") != null) {
-
-//           // get text of id scatterplot_sec
-//           var scatterplot_sec_text = document
-//               .getElementById("scatterplot_sec")
-//               .innerHTML;
-//           console.log("scatterplot_sec_text: " + scatterplot_sec_text)
-
-//           // remove <b> tag from document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("scatterplot_sec")
-//               .innerHTML = scatterplot_sec_text;
-
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("scatterplot_sec")
-//               .style
-//               .textDecoration = "none";
-//       }
-
-//       if (document.getElementById("boxplot_sec") != null) {
-
-//           // get text of id boxplot_sec
-//           var boxplot_sec_text = document
-//               .getElementById("boxplot_sec")
-//               .innerHTML;
-//           console.log("boxplot_sec_text: " + boxplot_sec_text)
-
-//           // make document.getElementById("boxplot_sec").innerHTML bold
-//           document
-//               .getElementById("boxplot_sec")
-//               .innerHTML = boxplot_sec_text;
-
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("boxplot_sec")
-//               .style
-//               .textDecoration = "none";
-//       }
-
-//       if (document.getElementById("dectree_sec") != null) {
-
-//           // get text of id dectree_sec
-//           var dectree_sec_text = document
-//               .getElementById("dectree_sec")
-//               .innerHTML;
-//           console.log("dectree_sec_text: " + dectree_sec_text)
-
-//           // make document.getElementById("dectree_sec").innerHTML bold
-//           document
-//               .getElementById("dectree_sec")
-//               .innerHTML = "<b>" + dectree_sec_text + "</b>";
-
-//           // add under line to document.getElementById("scatterplot_sec").innerHTML
-//           document
-//               .getElementById("dectree_sec")
-//               .style
-//               .textDecoration = "underline";
-
-//       }
-//   }
-
-// }
-
-function check_clickedid(clicked_id) {
-
-  // parse clicked_id with - and get the first part
-  // var clicked_id = clicked_id.split("-")[0];
-
-  // console.log("clicked_id: " + clicked_id)
-
-  // check whehter clicked_id has catterplot, boxplot or dectree
-  if (clicked_id == "scatterplot_sec-one" || clicked_id == "scatterplot_sec-two" || clicked_id == "scatterplot_sec-three") {
-      showScatter = true;
-      showBars = false;
-      showDecTree = false;
-
-      
-  } else if (clicked_id == "boxplot_sec-one" || clicked_id == "boxplot_sec-two" || clicked_id == "boxplot_sec-three") {
-      showScatter = false;
-      showBars = true;
-      showDecTree = false;
-
-
-  } else if (clicked_id == "dectree_sec-one" || clicked_id == "dectree_sec-two" || clicked_id == "dectree_sec-there") {
-      showScatter = false;
-      showBars = false;
-      showDecTree = true;
-
-
-
-  }
-
-}
-
-function ShowOnechartOfthem(clicked_id) {
-
-    // check whehter clicked_id has catterplot, boxplot or dectree
-    check_clickedid(clicked_id)
-
-    if (showScatter == true) {
-
-        // scatterPlot show section id scatterPlot and hide the others
-        document
-            .getElementById("scatterPlot")
-            .style
-            .display = "block";
-        document
-            .getElementById("boxPlot")
-            .style
-            .display = "none";
-        document
-            .getElementById("decTree")
-            .style
-            .display = "none";
-
-    } else if (showBars == true) {
-
-        document
-            .getElementById("scatterPlot")
-            .style
-            .display = "none";
-        document
-            .getElementById("boxPlot")
-            .style
-            .display = "block";
-        document
-            .getElementById("decTree")
-            .style
-            .display = "none";
-
-    } else if (showDecTree == true) {
-
-        document
-            .getElementById("scatterPlot")
-            .style
-            .display = "none";
-        document
-            .getElementById("boxPlot")
-            .style
-            .display = "none";
-        document
-            .getElementById("decTree")
-            .style
-            .display = "block";
-
-    }
-
-}
+                                                    }
