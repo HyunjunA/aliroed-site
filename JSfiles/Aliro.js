@@ -2052,8 +2052,8 @@ function decisiontree() {
     // = "structureC1.json"  generator_1 var file_namev2 = "structureC2_origin.json"
     // generator_2
 
-    var file_name = "structure_iris_dc_1.json" // generator_1
-        var file_namev2 = "structure_iris_dc_1.json" // generator_2
+    var file_name = "./json/structure_iris_dc_1.json" // generator_1
+        var file_namev2 = "./json/structure_iris_dc_1.json" // generator_2
 
             // var file_name = "structure_iris_dc_1_80_size.json"  generator_1 var
             // file_namev2 = "structure_iris_dc_1_80_size.json"  generator_2 var file_name =
