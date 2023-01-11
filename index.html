@@ -366,21 +366,21 @@
                                         type="button"
                                         class="btn btn-dark btn-lg scatterplotClass"
                                         onclick="ShowOnechartOfthem(this.id)"
-                                        style="width:33%"><p style="font-size:1.2vw; margin:0;">Scatter Plot</p></button>
+                                        style="width:33%"><p style=" margin:0;">Scatter Plot</p></button>
         
                                     <button
                                         id="boxplot_sec-one"
                                         type="button"
                                         class="btn btn-dark btn-lg boxplotClass"
                                         onclick="ShowOnechartOfthem(this.id)"
-                                        style="width:33%"><p style="font-size:1.2vw;margin:0;">Box Plot</p></button>
+                                        style="width:33%"><p style="margin:0;">Box Plot</p></button>
         
                                     <button
                                         id="dectree_sec-one"
                                         type="button"
                                         class="btn btn-dark btn-lg dectreeClass"
                                         onclick="ShowOnechartOfthem(this.id)"
-                                        style="width:33%"><p style="font-size:1.2vw;margin:0;">Decision Tree</p></button>
+                                        style="width:33%"><p style="margin:0;">Decision Tree</p></button>
         
                                 </p>
         
@@ -406,9 +406,9 @@
         
                                 <p>
         
-                                    <button id="projectxaxia_scatter" type="button" class="btn btn-primary"><p style="font-size:0.9vw;margin:0;">Project on X axis</p></button>
-                                    <button id="projectyaxia_scatter" type="button" class="btn btn-danger"><p style="font-size:0.9vw;margin:0;">Project on Y axis</p></button>
-                                    <button id="twoDPlot_scatter" type="button" class="btn btn-warning"><p style="font-size:0.9vw;margin:0;">Plot on 2D</p></button>
+                                    <button id="projectxaxia_scatter" type="button" class="btn btn-primary"><p class="scatterbuttons" style="margin:0;">Project on X axis</p></button>
+                                    <button id="projectyaxia_scatter" type="button" class="btn btn-danger"><p class="scatterbuttons" style="margin:0;">Project on Y axis</p></button>
+                                    <button id="twoDPlot_scatter" type="button" class="btn btn-warning"><p class="scatterbuttons" style="margin:0;">Plot on 2D</p></button>
         
                                 </p>
                                 <!-- locage svg in the middle -->
@@ -824,7 +824,7 @@
                     <section class="py-3 text-center container">
                         <div id="decDiv" class="row py-lg-3 bg-my">
                             <!-- <div class="py-lg-3"> <p> </p> </div> -->
-                            <div class="col-lg-6 col-md-8 mx-auto">
+                            <div class="col-lg-8 col-md-8 mx-auto">
                                 <!-- <h1 class="fw-light">A visual introduction to Aliro Ed</h1> -->
                                 <!-- <p class="lead text-muted">Something short and leading about the collection
                                 below—its contents, the creator, etc. Make it short and sweet, but not too short
@@ -866,7 +866,8 @@
                             style="background-color:lavenderblush;">.col-sm-4</div> -->
                             <!-- <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
                             -->
-                            <div class="col-lg-4 col-md-4 mx-auto">
+                            <!-- <div class="col-lg-4 col-md-4 mx-auto"> -->
+                            <div class="row-lg-4 row-md-4 mx-auto">
         
                                 <div id="intuition_exp" class="ContentScroll">
         
@@ -1047,7 +1048,7 @@
         <section class="cta" id="download">
             <div class="cta-content">
                 <div class="container px-5">
-                    <h2 class="text-white display-1 lh-1 mb-4">
+                    <h2 class="download_header text-white display-1 lh-1 mb-4 ">
                         <!-- Stop waiting. <br/> Start building. -->
                         Aliro Ed is a free, open-source, and easy-to-use tool for data science education.
                         <br/>
@@ -1205,8 +1206,8 @@
             <div class="text-center">
                 <a
                     href="mailto:AISupport@csmc.edu"
-                    style="text-decoration: none; font-size: large">Contact us</a >
-                if you have any questions or need help with installation.
+                    style="text-decoration: none; font-size: large">Contact us for more information. </a >
+                
             </div>
         </section>
 
@@ -1602,17 +1603,20 @@
         document
             .getElementById("rotateprojectxaxia")
             .style
-            .visibility = "hidden";
+            // .visibility = "hidden";
+            .display= "none"; 
         // projectyaxia
         document
             .getElementById("projectyaxia")
             .style
-            .visibility = "hidden";
+            // .visibility = "hidden";
+            .display= "none"; 
         // twoDPlot
         document
             .getElementById("twoDPlot")
             .style
-            .visibility = "hidden";
+            // .visibility = "hidden";
+            .display= "none"; 
 
         // fbbfirsttosecondbound
         document
