@@ -705,7 +705,7 @@ function onedplotToTwodPlot() {
         .append("circle")
         // sepal-length', 'sepal-width', 'petal-length', 'petal-width best
         .attr("cx", function (d) {
-            return x(0) + 165;
+            return x(0) + 240;
         })
         .attr("cy", function (d) {
             return y(d['sepal-length']);
@@ -730,7 +730,7 @@ function onedplotToTwodPlot() {
         })
         .duration(1000)
         .attr("cx", function (d) {
-            return x(0) + 165;
+            return x(0) + 240;
         })
         .attr("cy", function (d) {
             return y(d['sepal-length']);
@@ -1045,7 +1045,7 @@ function boxplot_direct_from_y() {
         .enter()
         .append("rect")
         // sepal-length', 'sepal-width', 'petal-length', 'petal-width best .attr("x",
-        // function (d) { return x(0)+165; } )
+        // function (d) { return x(0)+240; } )
         .attr("x", function (d) {
             return locationByColorClass(d['class'])
         })
@@ -1075,7 +1075,7 @@ function boxplot_direct_from_y() {
         })
         .duration(1000)
 
-        // .attr("x", function (d) { return x(0)+165; } )
+        // .attr("x", function (d) { return x(0)+240; } )
         .attr("x", function (d) {
             console.log("x", x(d['petal-length']))
             return locationByColorClass(d['class'])
@@ -2421,7 +2421,7 @@ function decisiontree() {
                                                                 // `-30 -30 500 400`) current .attr("viewBox", `-90 -30 500 400`)
                                                                 // .attr("viewBox", `-90 -30 600 800`) .attr("viewBox", `-90 -30 600 500`)
                                                                 // .attr("viewBox", `30 -80 600 600`)
-                                                                .attr("viewBox", `-90 -80 900 500`)
+                                                                .attr("viewBox", `-90 -80 880 520`)
                                                             // .attr("transform", "translate(180,50)");
 
                                                             TOTAL_SIZE = flare.size
