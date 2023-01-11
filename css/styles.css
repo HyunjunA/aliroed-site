@@ -11334,7 +11334,10 @@ section {
   font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:active {
-  color: #2937f0;
+  /* color: #2937f0; */
+  color: #6c757d;
+  /* make it bold */
+  /* font-weight: bold; */
 }
 #mainNav .navbar-toggler {
   font-size: 0.875rem;
@@ -12108,6 +12111,23 @@ padding-bottom: 0px!important;
 
 #scatterplot_sec-one, #boxplot_sec-one, #dectree_sec-one {
   margin-bottom: 0.5rem;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  p, p.lead {
+    font-size: 15px;
+  }
+
+  p.scatterbuttons{
+    font-size: 12px;
+  }
+
+  h2.download_header {
+    font-size: 30px;
+  }
 }
 
 
