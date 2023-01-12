@@ -11307,8 +11307,17 @@ html {
   font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
-.text-gradient {
+/* .text-gradient {
   background: -webkit-linear-gradient(#2937f0, #9f1ae2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+
+.text-gradient {
+  /* to red */
+  background: -webkit-linear-gradient(#2937f0, #dc3545);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -12114,7 +12123,12 @@ padding-bottom: 0px!important;
 }
 
 
+#first-head{
+  /* font-semibold */
+  /* font: 600 2.5rem/1.75rem "Inter", sans-serif; */
 
+
+}
 
 @media screen and (max-width: 600px) {
   p, p.lead {
@@ -12128,6 +12142,11 @@ padding-bottom: 0px!important;
   h2.download_header {
     font-size: 30px;
   }
+
+  #first-head{
+    font-size: 30px;
+  }
+
 }
 
 
